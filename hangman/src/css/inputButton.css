@@ -1,0 +1,17 @@
+.input-button {
+  background-color:rgba(255,255,255,0.3);
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 42px;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  display: inline-block;
+  }
+
+.input-button:hover {
+  background-color: rgba(255,255,255,0.5);
+  color: white;
+}
+  
