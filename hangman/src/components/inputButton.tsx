@@ -35,7 +35,7 @@ class InputButton extends React.Component<inputButtonProps, inputButtonState>{
                     className="input-button"
                     value={this.props.label}
                     onClick ={this.handleChange}
-                    
+                
                 />
             </div>
         );

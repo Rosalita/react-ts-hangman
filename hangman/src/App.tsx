@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Title from './components/title';
-import InputButton from './components/inputButton';
+import CharSelect from './components/charSelect';
 
 
 function App() {
@@ -10,9 +10,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Title/>
-        <InputButton label="A"/>
-        <InputButton label="B"/>
-        <InputButton label="C"/>
+        <CharSelect/>
+        
       </header>
     </div>
   );

@@ -13,7 +13,7 @@ It looks like this has alread added the following type definitions to package.js
 
 
 # Design
-[] needs a text input that accepts a single letter
+[x] needs a text input that accepts a single letter
 
 - Created a text input box 
 Typing in a letter feels awkward, user input should be a single action.
