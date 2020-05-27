@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Title from './components/title';
-import CharSelect from './components/charSelect';
+import GameContainer from './components/gameContainer';
 
 
 function App() {
@@ -10,7 +10,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Title/>
-        <CharSelect/>
+        <GameContainer/>
+    
         
       </header>
     </div>

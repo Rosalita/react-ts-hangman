@@ -1,0 +1,27 @@
+.game-container{
+  width: 640px;
+  height: 480px;
+  background-color:red;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 42px;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.word-display{
+  width: 640px;
+  height: 48px;
+  background-color:blue;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 42px;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  display: inline-block;
+}
