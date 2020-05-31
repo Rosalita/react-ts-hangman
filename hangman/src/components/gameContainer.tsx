@@ -2,6 +2,7 @@ import React from "react"
 import '../css/game.css';
 import CharSelect from './charSelect';
 import WordDisplay from './wordDisplay';
+import { countMistakes } from '../utils/countMistakes'
 
 
 
@@ -12,7 +13,6 @@ type GameProps = {
 type GameState = {
     word: string
     guessedLetters: string
-    totalMistakes: number
 }
 
 class GameContainer extends React.Component<GameProps, GameState>{
@@ -23,13 +23,15 @@ class GameContainer extends React.Component<GameProps, GameState>{
         super(props)
 
         this.state = {
-          word: "hangman",
+          word: "development",
           guessedLetters: "",
-          totalMistakes: 0
         }
 
         this.guessHandler = this.guessHandler.bind(this)
 
+    }
+    componentDidUpdate(prevProps: GameProps, prevState: GameState): void {
+        // check for game over
     }
 
     guessHandler(guess : string){
@@ -40,6 +42,7 @@ class GameContainer extends React.Component<GameProps, GameState>{
     render() {
         return (
             <div className="game-container">
+                total mistakes {countMistakes(this.state.word, this.state.guessedLetters)}
                 <WordDisplay word = {this.state.word} guessedLetters = {this.state.guessedLetters}/>
                 <CharSelect guessHandler = {this.guessHandler}/>
             </div>
