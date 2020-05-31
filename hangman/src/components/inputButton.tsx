@@ -4,6 +4,7 @@ import '../css/inputButton.css';
 
 type inputButtonProps = {
     label: string;
+    handleClick: (guess :string)=>void
 };
 
 type inputButtonState = {
@@ -22,9 +23,8 @@ class InputButton extends React.Component<inputButtonProps, inputButtonState>{
     }
 
     handleChange(e: React.MouseEvent) {
-        console.log(e.target)
-        console.log(this.state.isDisabled)
-        this.setState({isDisabled:true})     
+        this.setState({isDisabled:true})    
+        this.props.handleClick(this.props.label) 
     }
     render() {
         return (

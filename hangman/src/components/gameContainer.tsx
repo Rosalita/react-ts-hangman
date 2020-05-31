@@ -17,23 +17,31 @@ type GameState = {
 
 class GameContainer extends React.Component<GameProps, GameState>{
 
+    state: GameState
+
     constructor(props: GameProps){
         super(props)
 
         this.state = {
-          word: "rosie",
-          guessedLetters: "voice",
+          word: "hangman",
+          guessedLetters: "",
           totalMistakes: 0
         }
+
+        this.guessHandler = this.guessHandler.bind(this)
+
     }
 
-    // handle guess
+    guessHandler(guess : string){
+        this.setState({guessedLetters: this.state.guessedLetters += guess})
+    }
+    
 
     render() {
         return (
             <div className="game-container">
                 <WordDisplay word = {this.state.word} guessedLetters = {this.state.guessedLetters}/>
-                <CharSelect/>
+                <CharSelect guessHandler = {this.guessHandler}/>
             </div>
         );
     }

@@ -7,24 +7,13 @@ type WordDisplayProps = {
     guessedLetters: string
 }
 
-type WordDisplayState = {
-    hangmanWord: string
-}
 
 
-class WordDisplay extends React.Component<WordDisplayProps, WordDisplayState>{
-    constructor(props: WordDisplayProps) {
-        super(props)
-
-        this.state = {
-            hangmanWord: hangmanify(props.word, props.guessedLetters),
-        }
-    }
-
+class WordDisplay extends React.Component<WordDisplayProps>{
     render() {
         return (
             <div className="word-display">
-                Word: {this.state.hangmanWord}
+                Word: {hangmanify(this.props.word, this.props.guessedLetters)}
             </div>
         );
     }
