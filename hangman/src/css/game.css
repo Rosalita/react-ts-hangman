@@ -25,3 +25,17 @@
   text-decoration: none;
   display: inline-block;
 }
+
+.score{
+  width: 640px;
+  height: 48px;
+  background-color:green;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 42px;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  display: inline-block;
+}
