@@ -9,7 +9,6 @@ import { isWon } from '../utils/isWon';
 
 
 type GameProps = {
-
 }
 
 type GameState = {
@@ -27,13 +26,18 @@ class GameContainer extends React.Component<GameProps, GameState>{
         super(props)
 
         this.state = {
-          word: "cat",
+          word: "invulnerability",
           guessedLetters: "",
           won: 0,
           lost: 0,
         }
 
         this.guessHandler = this.guessHandler.bind(this)
+
+    }
+
+    componentDidMount(){
+        // log random word
 
     }
     componentDidUpdate(prevProps: GameProps, prevState: GameState): void {
