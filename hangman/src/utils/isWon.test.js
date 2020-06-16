@@ -1,5 +1,9 @@
 import { isWon } from './isWon';
 
+test('game isnt won if no letters have been guessed yet', () => {
+    expect(isWon("audiotyping", "")).toEqual(false);
+})
+
 test('game isnt won if one letter hasnt been guessed', () => {
     expect(isWon("cat", "ac")).toEqual(false);
 });

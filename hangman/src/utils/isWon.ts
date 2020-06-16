@@ -1,9 +1,14 @@
 
 export const isWon = (word: string, guessedLetters: string): boolean => {
 
-      // convert both word and letters to upper case before trying to match letters
-      word = word.toUpperCase()
-      guessedLetters = guessedLetters.toUpperCase()
+    // if no guessedLetters, then the game has not been won
+    if (guessedLetters.length === 0) {
+        return false
+    }
+
+    // convert both word and letters to upper case before trying to match letters
+    word = word.toUpperCase()
+    guessedLetters = guessedLetters.toUpperCase()
 
     for (let i = 0; i < word.length; i++) { // for each letter in the word
         for (let j = 0; j < guessedLetters.length; j++) { // loop through guessed letters

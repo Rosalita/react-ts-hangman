@@ -11,7 +11,7 @@ import(
 // Just a little helper script I used to sort the word files alphabetically and marshal them to json
 func main(){
 
-	dat, err := ioutil.ReadFile("15letters.txt")
+	dat, err := ioutil.ReadFile("4letters.txt")
     if err != nil {
 		fmt.Println(err)
 	}
