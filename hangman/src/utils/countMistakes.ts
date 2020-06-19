@@ -3,6 +3,8 @@ export const countMistakes = (word: string, guessedLetters: string): number => {
         return 0;
     }
 
+    console.log(word)
+    console.log(guessedLetters)
     // convert both word and letters to upper case before trying to match letters
     word = word.toUpperCase()
     guessedLetters = guessedLetters.toUpperCase()

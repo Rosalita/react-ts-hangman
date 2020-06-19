@@ -1,10 +1,16 @@
 import React from "react";
 import '../css/inputButton.css';
-
+import { countMistakes } from '../utils/countMistakes'
+import { isLost } from '../utils/isLost';
+import { isWon } from '../utils/isWon';
 
 type inputButtonProps = {
     label: string;
-    handleClick: (guess :string)=>void
+    handleClick: (guess: string) => void
+    handleWon: () => void
+    handleLost: () => void
+    word: string
+    guessedLetters: string
 };
 
 type inputButtonState = {
@@ -23,19 +29,28 @@ class InputButton extends React.Component<inputButtonProps, inputButtonState>{
     }
 
     handleChange(e: React.MouseEvent) {
-        this.setState({isDisabled:true})    
-        this.props.handleClick(this.props.label) 
+        this.setState({ isDisabled: true })
+        this.props.handleClick(this.props.label)
+
+
+        if (isLost(countMistakes(this.props.word, this.props.guessedLetters + this.props.label))) {
+            console.log("game is lost")
+            this.props.handleLost()
+
+        } else if (isWon(this.props.word, this.props.guessedLetters + this.props.label)) {
+            console.log("game is won")
+            this.props.handleWon()
+        }
     }
     render() {
         return (
             <div className="input-button">
                 <input
                     type="button"
-                    disabled = {this.state.isDisabled}
+                    disabled={this.state.isDisabled}
                     className="input-button"
                     value={this.props.label}
-                    onClick ={this.handleChange}
-                
+                    onClick={this.handleChange}
                 />
             </div>
         );

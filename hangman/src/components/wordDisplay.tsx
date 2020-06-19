@@ -8,7 +8,6 @@ type WordDisplayProps = {
 }
 
 
-
 class WordDisplay extends React.Component<WordDisplayProps>{
     render() {
         return (

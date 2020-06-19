@@ -15,3 +15,7 @@ test('game is won if all letters have been guessed', () => {
 test('game is won if guessed letters are upper case', () => {
     expect(isWon("cat", "CAT")).toEqual(true);
 });
+
+test('game is won if all letters guessed', () => {
+    expect(isWon("ventriloquies", "IVENTRCLOQUS")).toEqual(true);
+})

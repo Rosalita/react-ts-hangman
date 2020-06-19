@@ -16,3 +16,4 @@ test('it counts a mistake if an incorrect guess has been made', () => {
 test('it doesnt count correct upper case guesses as mistakes', () => {
     expect(countMistakes('hangman', "H")).toEqual(0);
 });
+
